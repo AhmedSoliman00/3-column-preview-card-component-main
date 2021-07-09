@@ -1,0 +1,117 @@
+// base
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap'); //font-family: 'Lexend Deca', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap'); //font-family: 'Big Shoulders Display', cursive;
+
+$color-bright-orange: hsl(31, 77%, 52%);
+$color-dark-cyan:hsl(184, 100%, 22%);
+$color-verydark-cyan: hsl(179, 100%, 13%);
+$color-text: hsla(0, 0%, 100%, 0.75);
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+
+.container {
+    width: 1440px;
+    max-width: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 40px;
+}
+
+@media(max-width:767px) {
+    .container {
+        max-width: 375px;
+    }
+}
+
+// start styling
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+
+    padding: 30px;
+    max-width: 300px;
+
+    h3 {
+        color: white;
+        font-size: 2.1rem;
+        font-family: 'Big Shoulders Display', cursive;
+        text-transform: uppercase;
+        margin: 20px 0;
+    }
+
+    p {
+        color: hsla(0, 0%, 100%, 0.75);
+        line-height: 1.6;
+        margin-bottom: 60px;
+        max-width: 210px;
+    }
+}
+
+.card-1 {
+    background-color: $color-bright-orange;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    .btn {
+        color: $color-bright-orange;
+    }
+}
+
+.card-2 {
+    background-color: $color-dark-cyan;
+
+    .btn {
+        color: $color-dark-cyan;
+    }
+}
+
+.card-3 {
+    background-color: $color-verydark-cyan;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    .btn {
+        color: $color-verydark-cyan;
+    }
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    font-size: 1rem;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-weight: bolder;
+    transition: all .3s ease-in-out;
+    margin-bottom: 40px;
+    cursor: pointer;
+
+    &:hover,
+    :focus {
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+    }
+}
+
+@media(max-width:767px) {
+    .container {
+        flex-direction: column;
+    }
+}
